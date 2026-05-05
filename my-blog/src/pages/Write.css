@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Be+Vietnam+Pro:wght@300;400;500&display=swap');
+
+/* ── Layout ── */
+.write-page {
+  display: flex;
+  gap: 28px;
+  margin-top: 32px;
+  align-items: flex-start;
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+/* ── Editor ── */
+.write-content {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+}
+
+.write-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  border: none;
+  outline: none;
+  padding: 0 0 12px;
+  background: transparent;
+  width: 100%;
+}
+
+.write-title::placeholder {
+  color: #ccc;
+}
+
+.write-divider {
+  height: 0.5px;
+  background: #e8e2da;
+  margin-bottom: 16px;
+}
+
+.write-body {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.9;
+  color: #333;
+  border: none;
+  outline: none;
+  resize: none;
+  background: transparent;
+  width: 100%;
+  min-height: 420px;
+  padding: 0;
+}
+
+.write-body::placeholder {
+  color: #ccc;
+}
+
+.write-wordcount {
+  margin-top: 12px;
+  font-size: 0.72rem;
+  color: #bbb;
+  letter-spacing: 0.05em;
+  text-align: right;
+}
+
+/* ── Sidebar ── */
+.write-sidebar {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: sticky;
+  top: 24px;
+}
+
+/* ── Card ── */
+.write-card {
+  background: #fff;
+  border: 0.5px solid #e8e2da;
+  border-radius: 14px;
+  padding: 1.1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.write-card-label {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: #aaa;
+  margin: 0;
+}
+
+/* ── Upload box ── */
+.write-upload-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 1.5rem;
+  border: 1px dashed #d5cdc4;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #bbb;
+  font-size: 0.8rem;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.write-upload-box:hover {
+  border-color: #a09080;
+  color: #888;
+}
+
+/* ── Image preview ── */
+.write-preview-wrap {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.write-preview {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+}
+
+.write-change-img {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  font-size: 0.72rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  transition: background 0.2s;
+}
+
+.write-change-img:hover {
+  background: rgba(0,0,0,0.75);
+}
+
+/* ── Setting rows ── */
+.write-setting-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.write-setting-key {
+  font-size: 0.82rem;
+  color: #666;
+}
+
+/* ── Badge ── */
+.write-badge {
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.write-badge--draft {
+  background: #f5f0e8;
+  color: #9a7f55;
+}
+
+/* ── Toggle ── */
+.write-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.write-toggle-track {
+  width: 36px;
+  height: 20px;
+  border-radius: 20px;
+  background: #ddd;
+  position: relative;
+  transition: background 0.25s;
+  flex-shrink: 0;
+}
+
+.write-toggle-track--on {
+  background: #73c7c7;
+}
+
+.write-toggle-thumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform 0.25s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+}
+
+.write-toggle-track--on .write-toggle-thumb {
+  transform: translateX(16px);
+}
+
+.write-toggle-label {
+  font-size: 0.82rem;
+  color: #555;
+  min-width: 56px;
+}
+
+/* ── Action buttons ── */
+.write-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.write-btn-draft,
+.write-btn-publish {
+  flex: 1;
+  padding: 0.65rem 0;
+  border-radius: 10px;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+}
+
+.write-btn-draft {
+  background: #f5f0e8;
+  color: #7a6a55;
+  border: 0.5px solid #ddd5c8;
+}
+
+.write-btn-draft:hover {
+  background: #ede5d8;
+}
+
+.write-btn-publish {
+  background: #2c2c2c;
+  color: #fff;
+}
+
+.write-btn-publish:hover {
+  background: #444;
+}
+
+.write-btn-publish:active,
+.write-btn-draft:active {
+  transform: scale(0.97);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .write-page {
+    flex-direction: column;
+  }
+  .write-sidebar {
+    position: static;
+    width: 100%;
+  }
+}
